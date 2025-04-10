@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazing Nova Sonic AI - State-of-the-art AI Voice Model</title>
+    <meta name="description" content="Amazing Nova Sonic AI offers a cutting-edge speech-to-speech model for conversational AI. Create professional AI voices with our Generative AI technology.">
+    <link rel="canonical" href="https://novasonicai.com/">
+    <style>
+        :root {
+            --primary-color: #f59e0b;
+            --secondary-color: #ec4899;
+            --text-color: #f3f4f6;
+            --light-text: #d1d5db;
+            --background: #0f172a;
+            --dark-background: #0a0f1c;
+            --card-background: #1e293b;
+            --border-radius: 8px;
+            --shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.2);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+
+        body {
+            color: var(--text-color);
+            background-color: var(--background);
+            background-image: radial-gradient(circle at 10% 10%, #1a2234 0%, var(--background) 70%);
+            background-attachment: fixed;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.25rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-color);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .logo-icon {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background-color: #f3f4f6;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: var(--light-text);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        .login-button {
+            background-color: rgba(245, 158, 11, 0.1);
+            color: var(--primary-color);
+            padding: 0.5rem 1.25rem;
+            border-radius: var(--border-radius);
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+        }
+
+        .login-button:hover {
+            background-color: rgba(245, 158, 11, 0.2);
+        }
+
+        /* Hero Section */
+        .hero {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 5rem 0 4rem;
+            text-align: center;
+        }
+
+        .hero-logo {
+            display: flex;
+            align-items: center;
+            margin-bottom: 2rem;
+            gap: 1rem;
+        }
+
+        .hero-logo-icon {
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            background-color: #f3f4f6;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-logo-text {
+            font-size: 3rem;
+            font-weight: 700;
+        }
+
+        .hero-logo-text .highlight {
+            color: var(--primary-color);
+        }
+
+        h1 {
+            font-size: 2rem;
+            line-height: 1.3;
+            margin-bottom: 1.5rem;
+            max-width: 700px;
+        }
+
+        .hero-subtitle {
+            font-size: 1.25rem;
+            color: var(--light-text);
+            margin-bottom: 2.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        .hero-subtitle .star {
+            color: var(--primary-color);
+        }
+
+        /* Feature Pills */
+        .feature-highlights {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin: 2.5rem 0;
+        }
+
+        .feature-highlight {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 0.5rem 1.25rem;
+            border-radius: 9999px;
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+
+        .feature-highlight.primary {
+            background-color: rgba(245, 158, 11, 0.2);
+            color: var(--primary-color);
+        }
+
+        .feature-highlight.secondary {
+            background-color: rgba(79, 70, 229, 0.2);
+            color: #818cf8;
+        }
+
+        /* Subtitle */
+        .subtitle {
+            font-size: 1.75rem;
+            font-weight: 700;
+            margin: 2rem 0 1rem;
+            text-align: center;
+        }
+
+        .subtitle-text {
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto 2.5rem;
+            color: var(--light-text);
+        }
+
+        /* CTA Button */
+        .cta-button {
+            background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 0.75rem 2rem;
+            border-radius: var(--border-radius);
+            font-weight: 600;
+            font-size: 1rem;
+            border: none;
+            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            display: inline-block;
+            text-decoration: none;
+            box-shadow: var(--shadow);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 20px -3px rgba(0, 0, 0, 0.3), 0 6px 8px -2px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Content Box */
+        .content-box {
+            background-color: var(--card-background);
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            margin: 3rem 0;
+            box-shadow: var(--shadow);
+        }
+
+        /* Sections */
+        .section {
+            padding: 4rem 0;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            text-align: center;
+            color: var(--text-color);
+        }
+
+        .section-subtitle {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 3rem;
+            color: var(--light-text);
+            font-size: 1.125rem;
+        }
+
+        h2 {
+            font-size: 1.875rem;
+            margin-bottom: 1.5rem;
+            text-align: center;
+            color: var(--text-color);
+        }
+
+        .section-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .section-text {
+            margin-bottom: 2rem;
+            text-align: center;
+            color: var(--light-text);
+        }
+
+        /* Features Grid */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .feature-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .feature-icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            border: 1px solid rgba(245, 158, 11, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            color: var(--primary-color);
+        }
+
+        .feature-icon svg {
+            width: 32px;
+            height: 32px;
+        }
+
+        .feature-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            color: var(--text-color);
+        }
+
+        .feature-description {
+            color: var(--light-text);
+            font-size: 0.9375rem;
+            line-height: 1.5;
+        }
+
+        /* FAQ Section */
+        .faq-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .faq-item {
+            background-color: rgba(255, 255, 255, 0.05);
+            border-radius: var(--border-radius);
+            padding: 1.5rem;
+        }
+
+        .faq-question {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--text-color);
+        }
+
+        .faq-answer {
+            color: var(--light-text);
+        }
+
+        /* Footer */
+        footer {
+            padding: 2rem 0;
+            text-align: center;
+            color: var(--light-text);
+            font-size: 0.875rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            .hero-logo-text {
+                font-size: 2.5rem;
+            }
+
+            .subtitle {
+                font-size: 1.5rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+            
+            .nav-links {
+                gap: 1rem;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+
+            .feature-highlights {
+                flex-direction: column;
+                gap: 1rem;
+                align-items: center;
+            }
+        }
+
+        @media (min-width: 769px) and (max-width: 1024px) {
+            .features-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* Input Style */
+        .input-container {
+            background-color: rgba(15, 23, 42, 0.7);
+            border-radius: var(--border-radius);
+            padding: 1rem;
+            margin: 2rem auto;
+            max-width: 700px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .input-label {
+            font-size: 0.875rem;
+            color: var(--light-text);
+            margin-bottom: 0.5rem;
+        }
+
+        .input-field {
+            background-color: rgba(30, 41, 59, 0.8);
+            border: none;
+            border-radius: var(--border-radius);
+            padding: 1rem;
+            color: var(--text-color);
+            font-size: 1rem;
+            width: 100%;
+            min-height: 100px;
+            resize: none;
+            margin-bottom: 1rem;
+        }
+
+        .input-field::placeholder {
+            color: rgba(209, 213, 219, 0.5);
+        }
+
+        .input-options {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .input-option {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--light-text);
+            font-size: 0.875rem;
+        }
+
+        .input-option input {
+            accent-color: var(--primary-color);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <a href="/" class="logo">
+                <div class="logo-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 4V20M12 4L18 10M12 4L6 10" stroke="#0f172a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                Amazing Nova Sonic AI
+            </a>
+            <div class="nav-links">
+                <a href="#features">Features</a>
+                <a href="#faqs">FAQs</a>
+                <a href="#pricing">Pricing</a>
+            </div>
+            <button class="login-button">Login</button>
+        </nav>
+    </div>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-logo">
+                <div class="hero-logo-icon">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 4V20M12 4L18 10M12 4L6 10" stroke="#0f172a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <div class="hero-logo-text">
+                    <span class="highlight">Amazing</span> Nova Sonic <span>AI</span>
+                </div>
+            </div>
+            
+            <h1>State-of-the-art speech-to-speech model for conversational AI</h1>
+            
+            <div class="hero-subtitle">
+                <span class="star">✨</span>
+                <span>The world's first unlimited free AI voice generator</span>
+                <span class="star">✨</span>
+            </div>
+            
+            <div class="feature-highlights">
+                <div class="feature-highlight primary">100% Free</div>
+                <div class="feature-highlight">No Login Required</div>
+                <div class="feature-highlight secondary">Unlimited Generations</div>
+            </div>
+
+            <h2 class="subtitle">Professional AI Voice Generator in minutes</h2>
+            <p class="subtitle-text">Experience the power of Generative AI with Amazing Nova. Create lifelike voices, transform your content, and elevate your projects with our cutting-edge AI voice model technology.</p>
+            
+            <a href="/coming-soon" class="cta-button" target="_blank">Get your AI Voice Generator</a>
+        </div>
+    </section>
+
+    <div class="container">
+        <div class="input-container">
+            <div class="input-label">Voice prompt</div>
+            <textarea class="input-field" placeholder="What would you like your AI voice to say?"></textarea>
+            
+            <div class="input-options">
+                <label class="input-option">
+                    <input type="checkbox" checked>
+                    Natural tone
+                </label>
+                <label class="input-option">
+                    <input type="checkbox">
+                    No background
+                </label>
+                <label class="input-option">
+                    <input type="checkbox">
+                    High quality
+                </label>
+                <label class="input-option">
+                    <input type="checkbox">
+                    No effects
+                </label>
+            </div>
+        </div>
+    </div>
+
+    <section class="section" id="features">
+        <div class="container">
+            <h2 class="section-title">Amazing Nova Sonic's Key Features</h2>
+            <p class="section-subtitle">Experience next-generation AI voice generation - powerful, free, and privacy-focused.</p>
+            
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 8c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm0 2c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2zm0 6c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2z" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Zero Cost Creation</h3>
+                    <p class="feature-description">The world's first completely free AI voice generator with no usage limits or registration requirements.</p>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M11.9999 2.82843L15.8788 6.70712L14.4646 8.12132L12.9999 6.65658V14.7069H10.9999V6.65658L9.53518 8.12132L8.12097 6.70712L11.9999 2.82843ZM19.5859 16.4143C19.5859 15.5199 18.8659 14.7999 17.9715 14.7999C17.0771 14.7999 16.3572 15.5199 16.3572 16.4143C16.3572 17.3086 17.0771 18.0286 17.9715 18.0286C18.8659 18.0286 19.5859 17.3086 19.5859 16.4143ZM16.3572 19.0286H19.5859V21.0286H16.3572V19.0286ZM11.9999 19.0286V21.0286H4.41406V19.0286H11.9999ZM7.64263 14.7999H11.9999V16.7999H7.64263V14.7999ZM4.41406 14.7999H7.64263V16.7999H4.41406V14.7999Z" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Superior Quality</h3>
+                    <p class="feature-description">Powered by FLUX.1-Dev model, delivering exceptional detail and artistic control for realistic voice output.</p>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12.87 15.07l-2.54-2.51.03-.03c1.74-1.94 2.98-4.17 3.71-6.53H17V4h-7V2H8v2H1v1.99h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12zm-2.62 7l1.62-4.33L19.12 17h-3.24z" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Advanced Text Understanding</h3>
+                    <p class="feature-description">Superior text-to-speech capability with accurate interpretation of complex prompts and text formatting.</p>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M16.01 7L16 3h-2v4h-4V3H8v4h-.01C7 6.99 6 7.99 6 8.99v5.49L9.5 18v3h5v-3l3.5-3.51v-5.5c0-1-1-2-1.99-1.99z" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Lightning Generation</h3>
+                    <p class="feature-description">Optimized processing pipeline ensures rapid voice generation without compromising quality.</p>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Enhanced Privacy</h3>
+                    <p class="feature-description">Zero data retention policy - your voice prompts are never stored on our servers for complete privacy.</p>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 3c-4.97 0-9 4.03-9 9s4.03 9 9 9c.83 0 1.5-.67 1.5-1.5 0-.39-.15-.74-.39-1.01-.23-.26-.38-.61-.38-.99 0-.83.67-1.5 1.5-1.5H16c2.76 0 5-2.24 5-5 0-4.42-4.03-8-9-8zm-5.5 9c-.83 0-1.5-.67-1.5-1.5S5.67 9 6.5 9 8 9.67 8 10.5 7.33 12 6.5 12zm3-4C8.67 8 8 7.33 8 6.5S8.67 5 9.5 5s1.5.67 1.5 1.5S10.33 8 9.5 8zm5 0c-.83 0-1.5-.67-1.5-1.5S13.67 5 14.5 5s1.5.67 1.5 1.5S15.33 8 14.5 8zm3 4c-.83 0-1.5-.67-1.5-1.5S16.67 9 17.5 9s1.5.67 1.5 1.5-.67 1.5-1.5 1.5z" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Multiple Style Support</h3>
+                    <p class="feature-description">Create voices in various artistic styles, from natural speaking to singing voices and specialized audio effects.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="faqs">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <p class="section-subtitle">
+                Common questions about Amazing Nova Sonic AI and our powerful Generative AI voice technology
+            </p>
+            
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question">What is Amazing Nova Sonic AI?</div>
+                    <div class="faq-answer">Amazing Nova Sonic AI is a state-of-the-art speech-to-speech model that leverages advanced Generative AI technology to create natural-sounding voices for conversational AI applications. It delivers real-time, human-like voice conversations with industry-leading price performance and low latency.</div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">How does the AI voice model work?</div>
+                    <div class="faq-answer">Our AI voice model uses deep learning algorithms to analyze and generate speech patterns that mimic human voice characteristics, creating natural and expressive audio content. The model understands streaming speech in various speaking styles and generates expressive speech responses that dynamically adapt to the prosody of input speech.</div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">Is Amazing Nova Sonic really free to use?</div>
+                    <div class="faq-answer">Yes! Amazing Nova Sonic AI offers 100% free access to our Generative AI voice technology with no login required and unlimited generations for all users.</div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">What accents and voice types does Nova Sonic support?</div>
+                    <div class="faq-answer">Nova Sonic supports expressive voices, including both masculine-sounding and feminine-sounding voices, in different English accents including American and British. This allows for great versatility in content creation and application development.</div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">Where can I access Nova Sonic?</div>
+                    <div class="faq-answer">Nova Sonic is available in Amazon Bedrock via the bidirectional streaming API. This integration enables seamless implementation into your existing workflows and applications with minimal setup required.</div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">What are the main applications for Nova Sonic AI?</div>
+                    <div class="faq-answer">The model can be utilized across a wide range of applications, including customer support call automation, outbound marketing, voice-enabled personal assistants and agents, interactive education and language learning, content creation for podcasts, and much more.</div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">Can I use Amazing Nova for commercial projects?</div>
+                    <div class="faq-answer">Absolutely! Our AI voice model is available for both personal and commercial use, making it perfect for podcasts, videos, applications, customer service automation, and other professional content.</div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">What makes Amazing Nova different from other voice generators?</div>
+                    <div class="faq-answer">Amazing Nova Sonic AI combines cutting-edge Generative AI technology with an intuitive interface and unlimited free usage, making professional voice creation accessible to everyone. Its low latency and adaptive capabilities make it uniquely suited for real-time conversational applications.</div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">How does Nova Sonic handle real-time conversations?</div>
+                    <div class="faq-answer">Nova Sonic is specially designed for real-time interactions, with industry-leading low latency that enables natural back-and-forth conversations. The model dynamically adapts to the prosody of input speech, creating a more authentic and engaging experience.</div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">Is training or customization required to use Nova Sonic?</div>
+                    <div class="faq-answer">No, Nova Sonic comes pre-trained and ready to use. While advanced customization options are available, the out-of-the-box experience delivers exceptional quality across a wide range of use cases without additional training or fine-tuning.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Amazing Nova Sonic AI. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Simple smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
